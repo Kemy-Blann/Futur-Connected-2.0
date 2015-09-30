@@ -26,6 +26,7 @@ public class Test {
 		 }
 		 
 		 System.out.println("\nAlors, impressionnés ?");
+		 System.out.println("\nTellement :O");
 		 
 	}
 }
