@@ -1,4 +1,17 @@
+import java.util.Random;
+
 public class Test {
+	
+	public String f(int i){
+		String rep;
+		if(i < 0) rep="Tamer";
+		else if(i==1) rep="Cocksucker";
+		else if(i==2) rep="Mons t'es nul";
+		else if(i==3) rep="Tonyo le bg";
+		else rep="Arretez bande de cons";
+		
+		return rep;
+	}
 	
 	public static void main(String[] args) throws InterruptedException {
 		System.out.println("Ça marche pour moi !"); //Kemy
@@ -28,5 +41,6 @@ public class Test {
 		 System.out.println("\nAlors, impressionnés ?");
 		 System.out.println("\nTellement :O");
 		 
+		 System.out.println(new Test().f(new Random().nextInt(10)));
 	}
 }
