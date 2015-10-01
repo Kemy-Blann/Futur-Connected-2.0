@@ -39,7 +39,7 @@ public class Test {
 		 }
 		 
 		 System.out.println("\nAlors, impressionnés ?");
-		 System.out.println("\nTellement :O");
+		 System.out.println("\nTellement :O"); //Xoli
 		 
 		 System.out.println(new Test().f(new Random().nextInt(10)));
 	}
