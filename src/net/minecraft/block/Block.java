@@ -28,6 +28,7 @@ import net.minecraft.util.Vec3;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import fr.futurconnected.block.BlockGasoil;
 import fr.futurconnected.block.BlockMetal;
 
 public class Block
@@ -391,6 +392,7 @@ public class Block
         
         //FUTUR CONNECTED
         blockRegistry.addObject(2000, "block_metal", new BlockMetal());
+        blockRegistry.addObject(2001, "block_gasoil", new BlockGasoil());
         
         Iterator var10 = blockRegistry.iterator();
 
