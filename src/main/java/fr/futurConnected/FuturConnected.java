@@ -1,5 +1,7 @@
 package fr.futurConnected;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -7,9 +9,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import fr.futurConnected.blocks.BlockFuelOre;
 import fr.futurConnected.blocks.BlockMetalOre;
+import fr.futurConnected.generation.FuelOreGeneration;
 import fr.futurConnected.generation.MetalOreGeneration;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 
 @Mod(modid = "fc", name = "Futur Connected", version = "1.0")
 public class FuturConnected {
@@ -35,8 +36,9 @@ public class FuturConnected {
 		
 		//Enregistrement des Items
 		
-		
+		//Enregistrement des World Generator
 		GameRegistry.registerWorldGenerator(new MetalOreGeneration(), 0);
+		GameRegistry.registerWorldGenerator(new FuelOreGeneration(), 0);
 	}
 	
 	@EventHandler
