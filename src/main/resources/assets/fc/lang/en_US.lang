@@ -1,2 +1,5 @@
 tile.blockMetalOre.name=Metal Ore
 tile.blockFuelOre.name=Fuel Ore
+item.Fuel.name=Fuel
+#CreativeTabs
+ItemGroup.Tutorial_creative_tabs=Futur Connected
