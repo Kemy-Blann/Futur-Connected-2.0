@@ -24,7 +24,7 @@ public class FuturConnected {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
 		//Initialisation des Blocks
-		blockMetalOre = new BlockMetalOre(Material.rock).setBlockName("blockMetalOre").setBlockTextureName("fc:blockMetalOre");
+		blockMetalOre = new BlockMetalOre(Material.rock).setBlockName("blockMetalOre").setBlockTextureName("fc:blockMetalOre").setLightLevel(0.2F);
 		blockFuelOre = new BlockFuelOre(Material.rock).setBlockName("blockFuelOre").setBlockTextureName("fc:blockFuelOre");
 		
 		//Initialisation des Items
