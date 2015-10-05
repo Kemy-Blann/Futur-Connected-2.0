@@ -8,7 +8,6 @@ public class Fuel extends Item{
 	public Fuel()
 	{
 		this.setCreativeTab(CreativeTabs.tabMaterials);
-		this.setTextureName("fc:Fuel");
 		this.maxStackSize = 64;
 	}
 }

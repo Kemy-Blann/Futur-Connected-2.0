@@ -7,7 +7,8 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import fr.futurConnected.items.*;
+import net.minecraft.world.World;
+import fr.futurConnected.items.Fuel;
 
 public class BlockFuelOre extends Block{
 
@@ -19,6 +20,7 @@ public class BlockFuelOre extends Block{
 		setResistance(5F);
 		setStepSound(soundTypePiston);
 		this.maxStackSize = 64;
+		this.setHarvestLevel("pickaxe", 2);
 	}
 	@Override
 	public Item getItemDropped(int id, Random rand, int fortune){
