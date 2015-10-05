@@ -8,6 +8,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
+import fr.futurConnected.FuturConnected;
 import fr.futurConnected.items.Fuel;
 
 public class BlockFuelOre extends Block{
@@ -24,7 +25,7 @@ public class BlockFuelOre extends Block{
 	}
 	@Override
 	public Item getItemDropped(int id, Random rand, int fortune){
-		return Items.coal;
+		return FuturConnected.Fuel;
 	}
 	@Override
 	public int quantityDropped(Random rand){

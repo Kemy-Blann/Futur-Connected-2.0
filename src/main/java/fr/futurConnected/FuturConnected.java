@@ -8,11 +8,9 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
-import fr.futurConnected.blocks.BlockFuelOre;
-import fr.futurConnected.blocks.BlockMetalOre;
-import fr.futurConnected.generation.FuelOreGeneration;
-import fr.futurConnected.generation.MetalOreGeneration;
-import fr.futurConnected.items.Fuel;
+import fr.futurConnected.blocks.*;
+import fr.futurConnected.generation.*;
+import fr.futurConnected.items.*;
 
 @Mod(modid = "fc", name = "Futur Connected", version = "1.0")
 public class FuturConnected {
@@ -24,6 +22,7 @@ public class FuturConnected {
 	
 	//Déclaration des Items
 	public static Item Fuel;
+	public static Item Metal;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
@@ -33,6 +32,7 @@ public class FuturConnected {
 		
 		//Initialisation des Items
 		Fuel = new Fuel().setUnlocalizedName("Fuel").setTextureName("fc:Fuel");
+		Metal = new Metal().setUnlocalizedName("Metal").setTextureName("fc:Métal");
 		
 		//Enregistrement des Blocks
 		GameRegistry.registerBlock(blockMetalOre, "Metal Ore");
@@ -41,7 +41,7 @@ public class FuturConnected {
 		
 		//Enregistrement des Items
 		GameRegistry.registerItem(Fuel, "Fuel");
-		
+		GameRegistry.registerItem(Metal, "Metal");
 		//Enregistrement des World Generator
 		GameRegistry.registerWorldGenerator(new MetalOreGeneration(), 0);
 		GameRegistry.registerWorldGenerator(new FuelOreGeneration(), 0);
