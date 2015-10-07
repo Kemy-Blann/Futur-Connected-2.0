@@ -15,10 +15,13 @@ import fr.futurConnected.items.*;
 @Mod(modid = "fc", name = "Futur Connected", version = "1.0")
 public class FuturConnected {
 	
+	public static final String MODID = "Futur Connected";
+	
 
 	//Déclaration des Blocks
 	public static Block blockMetalOre;
 	public static Block blockFuelOre;
+	public static Block blockRefinery;
 	
 	//Déclaration des Items
 	public static Item Fuel;
@@ -29,6 +32,7 @@ public class FuturConnected {
 		//Initialisation des Blocks
 		blockMetalOre = new BlockMetalOre(Material.rock).setBlockName("blockMetalOre").setBlockTextureName("fc:blockMetalOre");
 		blockFuelOre = new BlockFuelOre(Material.rock).setBlockName("blockFuelOre").setBlockTextureName("fc:blockFuelOre");
+		blockRefinery = new Refinery(Material.rock).setBlockName("blockRefinery");
 		
 		//Initialisation des Items
 		Fuel = new Fuel().setUnlocalizedName("Fuel").setTextureName("fc:Fuel");
@@ -37,6 +41,7 @@ public class FuturConnected {
 		//Enregistrement des Blocks
 		GameRegistry.registerBlock(blockMetalOre, "Metal Ore");
 		GameRegistry.registerBlock(blockFuelOre, "Fuel Ore");
+		GameRegistry.registerBlock(blockRefinery, "Refinery");
 		
 		
 		//Enregistrement des Items
