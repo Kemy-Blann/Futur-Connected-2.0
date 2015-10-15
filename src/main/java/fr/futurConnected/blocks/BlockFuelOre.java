@@ -2,20 +2,21 @@ package fr.futurConnected.blocks;
 
 import java.util.Random;
 
-import net.minecraft.block.Block;
+import net.minecraft.block.BlockOre;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.world.World;
+import net.minecraft.util.MathHelper;
+import net.minecraft.world.IBlockAccess;
 import fr.futurConnected.FuturConnected;
-import fr.futurConnected.items.Fuel;
 
-public class BlockFuelOre extends Block{
+public class BlockFuelOre extends BlockOre{
 
 	private int maxStackSize;
+	private Random rand = new Random();
+	
 	public BlockFuelOre(Material metal) {
-		super(metal);
+		super();
 		setCreativeTab(CreativeTabs.tabBlock);
 		setHardness(3F);
 		setResistance(5F);
@@ -31,4 +32,10 @@ public class BlockFuelOre extends Block{
 	public int quantityDropped(Random rand){
 		return 1 + rand.nextInt(5);
 	}
+	@Override
+	public int getExpDrop(IBlockAccess world, int pos, int fortune) {
+		return MathHelper.getRandomIntegerInRange(rand,10,40);
+	}
+	
+	
 }
